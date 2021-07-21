@@ -9,10 +9,16 @@
 <body>
 <p>test</p>
     <a href="https://app.daily.dev/anokha"><img src="https://api.daily.dev/devcards/645c9b51053d49258e144408a5de7268.png?r=hwo" width="400" alt="Brajesh Anokha's Dev Card"/></a>
-
+    <button onclick="vibrate(1000)">Vibrate single</button>
+    <button onclick="vibratePattern()">Vibrate Pattern</button>
     <script>
-        var successBool = navigator.vibrate(500);
-        console.log('successBool---', successBool);
+        function vibrate(ms) {
+            navigator.vibrate(ms);
+        }
+
+        function vibratePattern() {
+            navigator.vibrate([300, 100, 300, 100, 300]);
+        }
     </script>
 </body>
 </html>
